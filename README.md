@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# pomodoro-overload
+A customizable Pomodoro web app. Made by using React.js.
+
+To Edit:
+1. Clone this repo
+2. Run npm install
+3. Run npm start
+>>>>>>> 613118ef4cbf1ab94ef8712bb4dd305ee61c4bb4
