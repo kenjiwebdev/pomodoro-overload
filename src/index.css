@@ -1,0 +1,41 @@
+@font-face {
+  font-family: Luckiest Guy;
+  src: url(fonts/LuckiestGuy-Regular.ttf);
+}
+
+@font-face {
+	font-family: Black Ops One;
+	src: url(fonts/BlackOpsOne-Regular.ttf);
+}
+
+body {
+	background-color: #B80000;
+}
+
+h1 {
+	margin-top: 10px;
+	font-family: 'Luckiest Guy', cursive;
+}
+
+.bg-comp {
+	width: 200px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.card-task {
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+.timer {
+	font-family: 'Black Ops One', cursive;
+	font-size: 3rem;
+	width: 280px;
+	height: 60px;
+	border: black 2px solid;
+	margin: auto;
+	margin-bottom: 15px;
+	background-color: rgb(128,128,128, 0.8);	
+}
