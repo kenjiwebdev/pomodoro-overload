@@ -7,8 +7,12 @@ import Timer from './components/Timer';
 import CountPomodoro from './components/CountPomodoro';
 import { Container, Row, Col } from 'react-bootstrap';
 
+/*
+Main App Pomodoro Component, 
+Handles all the state, functionality and core logic to run Pomodoro.
+*/
 
-//Main App Pomodoro Component, Handles all main logic of the Pomdoro in one place.
+//TODO: Make the Pomdoro countdown time editable.
 class App extends React.Component {
 	constructor(props) {
 		super(props);

@@ -2,8 +2,10 @@ import React from 'react';
 import Popover from 'react-bootstrap/Popover'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 
-//Header Component handles the app title and Pomodoro tooltip. 
-//The tooltip allows users to have a quick overview of how Pomodoro technique works.
+/*
+Header Component handles the main header title and Pomodoro tooltip. 
+The tooltip allows users to have a quick info on Pomodoro technique.
+*/
 const popover = (
   <Popover id="popover-basic">
     <Popover.Title as="h3"><strong>What is Pomodoro Technique?</strong></Popover.Title>
@@ -19,7 +21,11 @@ const popover = (
 
 function Header() {
 	return (
-		<OverlayTrigger trigger={["hover", "focus"]} placement="bottom" overlay={popover}>
+		<OverlayTrigger 
+    trigger={["hover", "focus"]} 
+    placement="bottom" 
+    overlay={popover}
+    >
 			<h1>Pomodoro Overload</h1>
 		</OverlayTrigger>
 		)
