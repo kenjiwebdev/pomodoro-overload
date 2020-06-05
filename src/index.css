@@ -33,9 +33,15 @@ h1 {
 	font-family: 'Black Ops One', cursive;
 	font-size: 3rem;
 	width: 280px;
-	height: 60px;
-	border: black 2px solid;
+	height: 65px;
+	border: black 3px solid;
 	margin: auto;
 	margin-bottom: 15px;
 	background-color: rgb(128,128,128, 0.8);	
+}
+
+.setting-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
