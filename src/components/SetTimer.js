@@ -4,7 +4,8 @@ import Modal from 'react-bootstrap/Modal';
 import InputNumber from 'react-input-number';
 
 /*
-
+Set Timer component for more customization, allows the user to edit/change the
+default countdown timer of Pomodoro for there liking.
 */
 function SetTimer(props) {
 	  const [show, setShow] = React.useState(false);
@@ -23,6 +24,10 @@ function SetTimer(props) {
     const handleCloseDefault = () => {
       setShow(false);
       props.editTimerDefault();
+    }
+
+    const checkInputNum = (num1, num2, num3) => {
+
     }
 
 	return (

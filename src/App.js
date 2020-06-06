@@ -14,6 +14,7 @@ Handles all the state, functionality and core logic to run Pomodoro.
 Improve Sound and add Mute choice
 */
 
+//TODO: IMPLEMENT SET TIMER INPUT GUARDING && POMODORO COMPONENT STATISTICS - using local storage
 class App extends React.Component {
 	constructor(props) {
 		super(props);

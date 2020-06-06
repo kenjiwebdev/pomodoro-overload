@@ -41,7 +41,7 @@ h1 {
 }
 
 .setting-btn {
-  position: absolute;
-  bottom: 20px;
+  position: fixed;
+  bottom: 20px;	
   left: 20px;
 }
