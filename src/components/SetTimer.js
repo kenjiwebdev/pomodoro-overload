@@ -8,8 +8,8 @@ Set Timer component for more customization, allows the user to edit/change the
 default countdown timer of Pomodoro for there liking.
 */
 function SetTimer(props) {
-	  const [show, setShow] = React.useState(false);
-	  const handleClose = () => setShow(false);
+	const [show, setShow] = React.useState(false);
+	const handleClose = () => setShow(false);
   	const handleShow = () => setShow(true);
 
     const [num1, setNum1] = React.useState(0);
@@ -18,7 +18,15 @@ function SetTimer(props) {
 
     const handleCloseEdit = () => {
       setShow(false);
-      props.editTimer(num1, num2, num3);
+
+      if (checkInputIsNum(num1, num2, num3)) {
+        const arrSetting = convertToMillisecond(num1, num2, num3)
+        console.log(arrSetting)
+        props.editTimer(...arrSetting);
+      } else {
+          alert("Enter a valid number");
+          props.editTimerDefault();
+      }
     }
 
     const handleCloseDefault = () => {
@@ -26,8 +34,18 @@ function SetTimer(props) {
       props.editTimerDefault();
     }
 
-    const checkInputNum = (num1, num2, num3) => {
+    const checkInputIsNum = (...numArr) => {
+    	if (numArr.every(curr => typeof curr === "number")) {
+    		if (numArr.every(curr => curr > 0 && curr < 101)) {
+    			return true;
+    		}
+    	} 
+    	return false;
+    }
 
+    const convertToMillisecond = (...numArr) => {
+      const mapArr = numArr.map(num => num * 60000);
+      return mapArr;
     }
 
 	return (
@@ -43,9 +61,11 @@ function SetTimer(props) {
 
 		  <Modal show={show} onHide={handleClose}>
         	<Modal.Header closeButton>
-          	<Modal.Title>Pomodoro Timer Settings</Modal.Title>
+              <Modal.Title>Pomodoro Timer Settings</Modal.Title>
         	</Modal.Header>
         	<Modal.Body>
+          <h5>Enter how many minutes:</h5>
+          <br/>
         	<p>Main Timer:</p>
         		 <InputNumber value={num1} onChange={setNum1}/>
         	</Modal.Body>
