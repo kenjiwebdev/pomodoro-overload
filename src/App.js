@@ -5,6 +5,7 @@ import PomodoroButton from './components/PomodoroButton';
 import TaskCard from './components/TaskCard';
 import Timer from './components/Timer';
 import SetTimer from './components/SetTimer';
+import PomodoroStatistics from './components/PomodoroStatistics';
 import CountPomodoro from './components/CountPomodoro';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -14,7 +15,7 @@ Handles all the state, functionality and core logic to run Pomodoro.
 Improve Sound and add Mute choice
 */
 
-//TODO: IMPLEMENT SET TIMER INPUT GUARDING && POMODORO COMPONENT STATISTICS - using local storage
+//TODO: POMODORO COMPONENT STATISTICS - using local storage
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -158,6 +159,7 @@ class App extends React.Component {
 			editTimer={this.editTimer}
 			editTimerDefault={this.editTimerDefault}
 			/>
+			<PomodoroStatistics />
 			</div>
 		)
 	}

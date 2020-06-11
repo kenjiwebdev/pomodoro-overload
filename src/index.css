@@ -45,3 +45,9 @@ h1 {
   bottom: 20px;	
   left: 20px;
 }
+
+.stats-btn {
+  position: fixed;
+  bottom: 20px;	
+  right: 20px;
+}

@@ -10,11 +10,11 @@ default countdown timer of Pomodoro for there liking.
 function SetTimer(props) {
 	const [show, setShow] = React.useState(false);
 	const handleClose = () => setShow(false);
-  	const handleShow = () => setShow(true);
+  const handleShow = () => setShow(true);
 
-    const [num1, setNum1] = React.useState(0);
-    const [num2, setNum2] = React.useState(0);
-    const [num3, setNum3] = React.useState(0);
+  const [num1, setNum1] = React.useState(0);
+  const [num2, setNum2] = React.useState(0);
+  const [num3, setNum3] = React.useState(0);
 
     const handleCloseEdit = () => {
       setShow(false);
@@ -36,7 +36,7 @@ function SetTimer(props) {
 
     const checkInputIsNum = (...numArr) => {
     	if (numArr.every(curr => typeof curr === "number")) {
-    		if (numArr.every(curr => curr > 0 && curr < 101)) {
+    		if (numArr.every(curr => curr > 0 && curr < 121)) {
     			return true;
     		}
     	} 

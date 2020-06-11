@@ -3,8 +3,30 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 class PomodoroStatistics extends React.Component {
+  
+  constructor(props) {
+  	super(props);
+  	this.state = {
+		pomodoroHowMany: 0,
+		CompletedTask: "",
+		}
+  }
+
+
   render() {
-    return <h1>PLACEHOLDER</h1>;
+    return (
+    	<div>
+    	 <Button 
+		  className="stats-btn" 
+		  variant="outline-dark" 
+		  size="sm"
+		  >
+		  Stats
+		  </Button>
+
+		 
+		</div>
+    	)
   }
 }
 

@@ -16,7 +16,7 @@ const tick = new UIfx(
 class Timer extends React.Component {
 
 	playAudio = () => {
-		tick.play(0.3)
+		tick.play(0.1)
 	}
 	
 	render() {
