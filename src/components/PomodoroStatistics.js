@@ -2,12 +2,18 @@ import React from 'react';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import ls from 'local-storage'
 
 function PomodoroStatistics (props) {
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
+
+  const handleClear = () => {
+    handleClose();
+    props.resetLocalStorage();
+  }
 
     return (
     	<div>
@@ -26,8 +32,14 @@ function PomodoroStatistics (props) {
         	</Modal.Header>
 
         	<Modal.Body>
-        	Woohoo, you're reading this text in a modal!
+        	{`Total Pomdoro: ${ls.get("pomodoroCount")}`}
         	</Modal.Body>
+
+        	<Modal.Footer>
+        	<Button variant="secondary" onClick={handleClear}>
+            Clear
+          	</Button>
+          	</Modal.Footer>
       	 </Modal>
 		 
 		</div>

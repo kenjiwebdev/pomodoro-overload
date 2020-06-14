@@ -8,14 +8,15 @@ import SetTimer from './components/SetTimer';
 import PomodoroStatistics from './components/PomodoroStatistics';
 import CountPomodoro from './components/CountPomodoro';
 import { Container, Row, Col } from 'react-bootstrap';
+import ls from 'local-storage'
 
 /*
 Main App Pomodoro Component, 
 Handles all the state, functionality and core logic to run Pomodoro.
 Improve Sound and add Mute choice
+1.5e+6
 */
 
-//TODO: POMODORO COMPONENT STATISTICS - using local storage
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -26,8 +27,8 @@ class App extends React.Component {
 			pomodoroRunning: false,
 			pomodoroCompleted: false,
 			onBreak: false,
-			date: Date.now() + 1.5e+6,
-			mainTimer: 1.5e+6,
+			date: Date.now() + 2000,
+			mainTimer: 2000,
 			shortTimer: 300000,
 			longTimer: 900000,
 		}
@@ -73,6 +74,7 @@ class App extends React.Component {
 			this.setState({count: this.state.count + 1});
 			this.setState({pomodoroCompleted: true});
 			this.setState({date: Date.now() + this.state.longTimer});
+			this.updateLocalCountStorage();
 		} else if (this.state.count === 4) {
 			this.setState({pomodoroRunning: false});
 			this.setState({onBreak: false});
@@ -84,6 +86,7 @@ class App extends React.Component {
 			this.setState({onBreak: true});
 			this.setState({count: this.state.count + 1});
 			this.setState({date: Date.now() + this.state.shortTimer});
+			this.updateLocalCountStorage();
 		} else {
 			this.setState({pomodoroRunning: false});
 			this.setState({date: Date.now() + this.state.mainTimer});
@@ -125,6 +128,23 @@ class App extends React.Component {
 		this.cancelPomodoro();
 	}
 
+	resetLocalStorage = () => {
+		var ls = require('local-storage');
+		ls.clear();
+		ls("pomodoroCount", 0);
+	}
+
+	componentDidMount() {
+		var ls = require('local-storage');
+		ls("pomodoroCount", 0);
+	}
+
+	updateLocalCountStorage = () => {
+		let tempNum = ls.get("pomodoroCount");
+		tempNum++
+		ls.set("pomodoroCount", tempNum);
+	}
+
 	render() {
 		return (
 			<div>
@@ -159,7 +179,9 @@ class App extends React.Component {
 			editTimer={this.editTimer}
 			editTimerDefault={this.editTimerDefault}
 			/>
-			<PomodoroStatistics />
+			<PomodoroStatistics 
+			resetLocalStorage={this.resetLocalStorage}
+			/>
 			</div>
 		)
 	}

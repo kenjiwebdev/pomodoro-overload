@@ -21,7 +21,6 @@ function SetTimer(props) {
 
       if (checkInputIsNum(num1, num2, num3)) {
         const arrSetting = convertToMillisecond(num1, num2, num3)
-        console.log(arrSetting)
         props.editTimer(...arrSetting);
       } else {
           alert("Enter a valid number");

@@ -1,6 +1,7 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import ls from 'local-storage';
 
 // Task Card Component handles the logic on how to change and edit the user Pomodoro task card.
 class TaskCard extends React.Component {
