@@ -22,6 +22,11 @@ class TaskCard extends React.Component {
 		this.setState({textValue: event.target.value});  
 	}
 
+	storeTaskLocalStorage = (task) => {
+		this.props.addTaskArr(task);
+		ls.set("pomodoroTasks", this.props.taskArr);
+	}
+
 	changeTask = () => {
 		if (this.state.textValue === "") {
 			this.setState({task: "Focus is the Key."});  
@@ -29,6 +34,7 @@ class TaskCard extends React.Component {
 			this.setState({textValue: ''});  
 		} else {
 			this.setState({task: this.state.textValue})
+			this.storeTaskLocalStorage(this.state.textValue)
 			this.setState({defaultTask: true})
 			this.setState({textValue: ''});  
 		}

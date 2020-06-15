@@ -13,8 +13,6 @@ import ls from 'local-storage'
 /*
 Main App Pomodoro Component, 
 Handles all the state, functionality and core logic to run Pomodoro.
-Improve Sound and add Mute choice
-1.5e+6
 */
 
 class App extends React.Component {
@@ -27,10 +25,11 @@ class App extends React.Component {
 			pomodoroRunning: false,
 			pomodoroCompleted: false,
 			onBreak: false,
-			date: Date.now() + 2000,
-			mainTimer: 2000,
+			date: Date.now() + 1.5e+6,
+			mainTimer: 1.5e+6,
 			shortTimer: 300000,
 			longTimer: 900000,
+			taskArr: [],
 		}
 	}
 
@@ -130,12 +129,8 @@ class App extends React.Component {
 
 	resetLocalStorage = () => {
 		var ls = require('local-storage');
+		this.setState({taskArr: []});
 		ls.clear();
-		ls("pomodoroCount", 0);
-	}
-
-	componentDidMount() {
-		var ls = require('local-storage');
 		ls("pomodoroCount", 0);
 	}
 
@@ -143,6 +138,10 @@ class App extends React.Component {
 		let tempNum = ls.get("pomodoroCount");
 		tempNum++
 		ls.set("pomodoroCount", tempNum);
+	}
+
+	addTaskArr = (task) => {
+		this.state.taskArr.push(task);
 	}
 
 	render() {
@@ -153,7 +152,10 @@ class App extends React.Component {
 					<Col>
 						<Header />
 						<BackgroundColor />
-						<TaskCard />
+						<TaskCard 
+						addTaskArr={this.addTaskArr}
+						taskArr={this.state.taskArr}
+						/>
 						<CountPomodoro 
 						count={this.state.count}
 						restartCount={this.restartCount}

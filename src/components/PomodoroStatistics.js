@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ls from 'local-storage'
 
+//Insert useful comments
+
 function PomodoroStatistics (props) {
 	const [show, setShow] = useState(false);
 
@@ -13,6 +15,26 @@ function PomodoroStatistics (props) {
   const handleClear = () => {
     handleClose();
     props.resetLocalStorage();
+  }
+
+  const displayPomodoroTask = () => {
+    const localTaskArr = ls.get("pomodoroTasks");
+    if (localTaskArr === null) {
+      return <li>Focus is the key!</li>
+    } else {
+      const taskArrList = localTaskArr.map((task) =>
+      <li>{task}</li>
+      );
+      return taskArrList
+    }
+  }
+
+  const displayPomodoroCount = () => {
+    if (ls.get("pomodoroCount") === null) {
+      return `Total Pomdoro: 0` 
+    } else {
+      return `Total Pomdoro: ${ls.get("pomodoroCount")}`
+    }
   }
 
     return (
@@ -32,7 +54,12 @@ function PomodoroStatistics (props) {
         	</Modal.Header>
 
         	<Modal.Body>
-        	{`Total Pomdoro: ${ls.get("pomodoroCount")}`}
+          Pomodoro Tasks:
+          <ul className="pomodoro-list-task">
+          {displayPomodoroTask()}
+          </ul>
+          <br/>
+        	{displayPomodoroCount()}
         	</Modal.Body>
 
         	<Modal.Footer>
@@ -45,18 +72,5 @@ function PomodoroStatistics (props) {
 		</div>
     	)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default PomodoroStatistics;
