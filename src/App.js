@@ -12,7 +12,7 @@ import ls from 'local-storage'
 
 /*
 Main App Pomodoro Component, 
-Handles all the state, functionality and core logic to run Pomodoro.
+Handles all the state, functionality and core logic to run the Pomodoro.
 */
 
 class App extends React.Component {

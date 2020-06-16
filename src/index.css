@@ -62,6 +62,7 @@ h1 {
 	font-size: 1.4rem;
 }
 
-.pomodoro-list-task li {
-	
+.pomodoro-list-task {
+	margin-left: -10px;
+	word-wrap: break-word;
 }

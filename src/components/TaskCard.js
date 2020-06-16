@@ -32,6 +32,11 @@ class TaskCard extends React.Component {
 			this.setState({task: "Focus is the Key."});  
 			this.setState({defaultTask: true})
 			this.setState({textValue: ''});  
+		} else if (this.state.textValue.length > 100) {
+			alert("Please enter a maximum of 100 characters")
+			this.setState({task: "Focus is the Key."});  
+			this.setState({defaultTask: true})
+			this.setState({textValue: ''});  
 		} else {
 			this.setState({task: this.state.textValue})
 			this.storeTaskLocalStorage(this.state.textValue)

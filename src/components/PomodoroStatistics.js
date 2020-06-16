@@ -4,7 +4,10 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ls from 'local-storage'
 
-//Insert useful comments
+/*
+Pomodoro Statistics Component allows the user to see the task s/he have done 
+and the total ammount of Pomodoro s/he have finish.
+*/
 
 function PomodoroStatistics (props) {
 	const [show, setShow] = useState(false);
