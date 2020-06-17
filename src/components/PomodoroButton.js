@@ -7,18 +7,18 @@ class PomodoroButton extends React.Component {
 		return (
 			<div>
 				{ !this.props.pomodoroRunning && !this.props.onBreak &&
-					<Button size="lg" onClick={this.props.startPomdoro} 
+					<Button className="pomodoro-btns" size="lg" onClick={this.props.startPomdoro} 
 					variant="secondary">Start Pomodoro </Button>}
 				{ this.props.pomodoroRunning &&
-					<Button size="lg" onClick={this.props.cancelPomodoro}
+					<Button className="pomodoro-btns" size="lg" onClick={this.props.cancelPomodoro}
 					variant="secondary">Cancel Pomodoro </Button>}
 				{ !this.props.pomodoroRunning && this.props.onBreak 
 					&& !this.props.pomodoroCompleted &&
-					<Button  size="lg"onClick={this.props.shortBreakPomdoro}
+					<Button className="pomodoro-btns" size="lg"onClick={this.props.shortBreakPomdoro}
 					variant="secondary">Short Break </Button>
 				}
 				{ !this.props.pomodoroRunning && this.props.pomodoroCompleted &&
-					<Button  size="lg" onClick={this.props.longBreakPomdoro}
+					<Button className="pomodoro-btns" size="lg" onClick={this.props.longBreakPomdoro}
 					variant="secondary">Long Break </Button>
 				}
 			</div>	

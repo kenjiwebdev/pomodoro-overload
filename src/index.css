@@ -41,14 +41,16 @@ h1 {
 }
 
 .setting-btn {
+  display: block;
   position: fixed;
-  bottom: 20px;	
+  bottom: 10px;	
   left: 20px;
 }
 
 .stats-btn {
+  display: block;
   position: fixed;
-  bottom: 20px;	
+  bottom: 10px;	
   right: 20px;
 }
 
@@ -65,4 +67,8 @@ h1 {
 .pomodoro-list-task {
 	margin-left: -10px;
 	word-wrap: break-word;
+}
+
+.pomodoro-btns {
+	margin-bottom: 20px;
 }
