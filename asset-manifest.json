@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pomodoro-overload/static/css/main.9fa1f683.chunk.css",
+    "main.css": "/pomodoro-overload/static/css/main.5b38d701.chunk.css",
     "main.js": "/pomodoro-overload/static/js/main.779713bd.chunk.js",
     "main.js.map": "/pomodoro-overload/static/js/main.779713bd.chunk.js.map",
     "runtime-main.js": "/pomodoro-overload/static/js/runtime-main.daae799e.js",
@@ -9,10 +9,10 @@
     "static/js/2.a3c440a3.chunk.js": "/pomodoro-overload/static/js/2.a3c440a3.chunk.js",
     "static/js/2.a3c440a3.chunk.js.map": "/pomodoro-overload/static/js/2.a3c440a3.chunk.js.map",
     "index.html": "/pomodoro-overload/index.html",
-    "precache-manifest.5195a8b99be37a61065650bd8a09a98d.js": "/pomodoro-overload/precache-manifest.5195a8b99be37a61065650bd8a09a98d.js",
+    "precache-manifest.1e676044aa53c4cd51b6fbb61897161d.js": "/pomodoro-overload/precache-manifest.1e676044aa53c4cd51b6fbb61897161d.js",
     "service-worker.js": "/pomodoro-overload/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/pomodoro-overload/static/css/2.de424728.chunk.css.map",
-    "static/css/main.9fa1f683.chunk.css.map": "/pomodoro-overload/static/css/main.9fa1f683.chunk.css.map",
+    "static/css/main.5b38d701.chunk.css.map": "/pomodoro-overload/static/css/main.5b38d701.chunk.css.map",
     "static/js/2.a3c440a3.chunk.js.LICENSE.txt": "/pomodoro-overload/static/js/2.a3c440a3.chunk.js.LICENSE.txt",
     "static/media/index.css": "/pomodoro-overload/static/media/LuckiestGuy-Regular.c6004be4.ttf",
     "static/media/switch.mp3": "/pomodoro-overload/static/media/switch.a3778d58.mp3"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.daae799e.js",
     "static/css/2.de424728.chunk.css",
     "static/js/2.a3c440a3.chunk.js",
-    "static/css/main.9fa1f683.chunk.css",
+    "static/css/main.5b38d701.chunk.css",
     "static/js/main.779713bd.chunk.js"
   ]
 }
